@@ -7,8 +7,19 @@ class User extends Component {
     render() {
         let {user} = this.props;
         return (
-            <div>
-              <div>{user.name}-{user.age}-{user.status.toString()}</div>
+            <div> {
+                !user.status && (
+                    <strong>
+                        <div>{user.name}-{user.age}-{user.status.toString()}
+                        </div>
+                    </strong>
+                    )
+                }
+                {
+                    user.status && (
+                        <div>{user.name}-{user.age}-{user.status.toString()}</div>
+                    )
+                }
             </div>
         );
     }

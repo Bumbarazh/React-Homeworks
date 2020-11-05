@@ -21,7 +21,7 @@ class UserByChar extends Component {
                 {
                     this.state.inputChar && this.state.users.filter(user => {
                         console.log(user);
-                        return user.name.includes(this.state.inputChar.toLowerCase());
+                        return user.name.toLowerCase().includes(this.state.inputChar.toLowerCase());
                     }).map(item => {
                         return (
                             <User user={item} key={item.id}/>
